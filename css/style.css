@@ -36,6 +36,13 @@ Table Of Index
 24. Media Screen Css
 ------------------------------------------*/
 
+.GetQuote{
+    float: right;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 
 
 
@@ -1040,21 +1047,16 @@ input[type=date]{color: #fff !important;}
 /********************************************
        == Get In Touch Start ==
 ********************************************/
-.get-wrap{padding: 60px 0; text-align: center; background: url(../images/pestcontrol/getintouch3.jpg) no-repeat top; background-size: cover;}
+.get-wrap{padding: 60px 0; text-align: center; background: url(../images/pestcontrol/footer0.jpg) no-repeat top; background-size: cover;}
 .get-wrap .title{margin-bottom: 60px;}
-.get-wrap .title h1{font-size: 62px; color: #000; font-weight: bold;}
+.get-wrap .title h1{font-size: 62px; color: #fff; font-weight: bold;}
 .get-wrap .title:after{left: 50%; margin-left: -28px; bottom: -24px;}
-.get-wrap p{color: #000; font-size: 16px; padding: 0 140px;}
-.callText{font-size: 24px; color: #000; font-family: 'Montserrat', sans-serif;}
+.get-wrap p{color: #fff; font-size: 16px; padding: 0 140px;}
+.callText{font-size: 24px; color:#fff; font-family: 'Montserrat', sans-serif;}
 .get-wrap .phonewrp{position: relative; display: inline-block; padding-left: 85px; margin-top: 20px;}
-.get-wrap .phonewrp a{text-decoration: none; font-size: 50px; color: #11b4f5; font-family: 'Montserrat', sans-serif; font-weight: 600;}
-.get-wrap .phonewrp:before{content: ""; background: url(../images/phone_icon.png) no-repeat top; background-size: cover; width: 63px; height: 63px; position: absolute; top: 10px; left: 0;}
-.get-wrap .phonewrp a:hover{color: #11b4f5;}
-
-
-
-
-
+.get-wrap .phonewrp a{text-decoration: none; font-size: 30px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 600;}
+.get-wrap .phonewrp:before{content: ""; background: url(../images/phone_icon.png) no-repeat top; background-size: cover; width: 50px; height: 50px; position: absolute; top: 10px; left: 0;}
+.get-wrap .phonewrp a:hover{color: #fff;}
 
 
 /********************************************
@@ -1196,7 +1198,7 @@ section.our_team_wrap .team_member{
 ********************************************/
 .footer{
    background:#0040ff; padding: 50px 0 20px 0;
-   z-index: 1; background: url(../images/pestcontrol/footer2.jpg) no-repeat top; background-size: cover; padding: 80px 0 100px 0;
+   z-index: 1; background: url(../images/pestcontrol/footer0.jpg) no-repeat top; background-size: cover; padding: 80px 0 100px 0;
 }
 
 
@@ -1481,7 +1483,7 @@ section.our_team_wrap .team_member{
 
 
 input:focus{outline: none !important;}
-.innerHeading{background: url(../images/pestcontrol/header.jpg); padding: 40px 0; background-size: cover; text-align: center;}
+.innerHeading{background: url(../images/pestcontrol/footer0.jpg); padding: 40px 0; background-size: cover; text-align: center;}
 .innerHeading h1{color: #fff; font-size: 36px; font-weight: 600;}
 .innercontent{padding: 80px 0;}
 .innercontent .about-wrap{background: none; padding: 0;}
@@ -1610,9 +1612,9 @@ blockquote {
     font-size: 14px;
     font-style: italic;
     line-height: 24px;
-    background: #11b4f5;
+    background: #fff;
     padding: 25px;
-    border-left: 8px solid rgb(8, 17, 153);
+    border-left: 8px solid #fff;
     margin: 20px 0;
 }
 .blog_post p{margin-bottom: 0; min-height: 72px;}
@@ -2642,6 +2644,4 @@ h2::after {
     border: none;
     background: #888
 
-/* ---------------------------------- 
-     mailbox Css
-------------------------------------- *
+   
