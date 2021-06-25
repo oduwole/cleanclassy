@@ -1,5 +1,10 @@
 (function($) { 
 
+  $('#GetQuote').on('click', function(e){
+    e.preventDefault();
+    $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
+  });
+
 $('[data-toggle="offcanvas"]').on('click', function () {
     $('.navbar-collapse').toggleClass('show');
     });

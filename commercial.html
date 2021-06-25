@@ -75,7 +75,7 @@
               
               <li class="nav-item"><a class="nav-link" href="contact.html"> Contact Us</a></li>
             </ul>
-            <a class="btn btn-primary GetQuote" id="GetQuote" href="javascript:void(0);">Get Quote</a>
+            <a class="btn btn-primary GetQuote" id="GetQuote" data-toggle="modal" href="./quotes.html" data-target="#theModal">Get Quote</a>
           </div>
         </nav>
       </div>
@@ -87,7 +87,9 @@
 <!--Inner Heading Start-->
 <div class="innerHeading">
   <div class="container">
-    <h1>Clean environment is a safe one and we make sure of it.</h1>
+    <h1>Our Service</h1>
+    <!--<h3 class="caption lft large-title tp-resizeme slidertext2" data-x="centre" data-y="190" data-speed="600" data-start="2200">Commercial Cleaning</p>
+      <p class="caption lfb large-title tp-resizeme slidertext3" data-x="centre" data-y="310" data-speed="600" data-start="2800">A clean environment is a safe one and we make sure of it.</p>-->
   </div>
 </div>
 <!--Inner Heading End--> 
@@ -104,9 +106,9 @@
       <div class="col-lg-6">
         <div class="about_box">
           <div class="title">
-            <h3>Commercial Cleaning</h3>
+            <h3>Office and Residential Cleaning </h3>
           </div>
-          <p>Office and Residential Cleaning – The work and living environments are important space in our everyday life that needs to be kept clean and safe.
+          <p>The work and living environments are important space in our everyday life that needs to be kept clean and safe.
             <br> A clean and safe environment facilitates good living and work condition.</p>
             <p>One thing the outbreak of the COVID-19 pandemic in 2020 has taught everyone is that the health and safety of people are directly tied to the cleanliness/sanitization and safety of our environment. 
             <br>Also, it is proven knowledge that a clean and organized environment is a good contributing factor to boost mental wellbeing and productivity. </p>
@@ -122,64 +124,22 @@
 </div>
 <!--Inner Content End-->
 
-<!-- Get In Touch start -->
-<div class="get-wrap">
-  <div class="container">
-    <div class="title">
-    </div>
-    <p>You will be satisfied with every service you need</p>
-    <div class="callText">Call us! we are available 24/7</div>
-    <div class="phonewrp"><a href="#">+234 805 173 0803</a></div>
-  </div>
-</div>
-<!-- Get In Touch End -->
-
-
-<!--Newsletter Start-->
-  <div class="newsletter-wrap wow fadeInUp">
-<div class="container">
-
-    <div class="row">
-      <div class="col-lg-5">
-        <div class="title">
-          <h1><span>Stay in Loop</span> Join our Newsletter</h1>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <div class="news-info">
-          <form>
-            <div class="input-group">
-              <input type="text" class="form-control" name="search" placeholder="Your Email Address">
-              <div class="form_icon"><i class="fas fa-envelope"></i></div>
-            </div>
-            <input type="submit" class="sigup" value="Subscribe">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Newsletter End-->
-
 <!--Footer Start-->
 <footer class="footer bg-style wow fadeInUp bg_img" data-overlay="6">
+  <h4 class="callText text-center">You will be satisfied with every service you need</h4>
+  <h4 class="callText text-center">Call us! we are available 24/7</h4>
   <div class="container">
     <div class="footer-upper">
       <div class="row" >
-
         <div class="col-lg-3 col-md-3">
           <div class="footer-widget quick-links">
             <h3 class="title">Services</h3>
             <ul>
-              <li><a href="#."> Cleaning Services</a> </li>
-              <li><a href="commercial.html">commercial cleaning</a> </li>
               <li><a href="construction.htm">Post Construction cleaning</a> </li>
               <li><a href="upholstery.html">Carpet, Sofa and Upholstery Cleaning</a> </li>
               <li><a href="tenacy.html">End of Tenancy </a> </li>
-              <li><a href="window.html">Window Cleaning</a> </li>
               <li><a href="pest.html">Pest Control </a> </li>
               <li><a href="laundry.html">Laundry and Dry-cleaning </a> </li>
-            </ul>
           </div>
         </div>
         <div class="col-lg-2 col-md-3">
@@ -187,7 +147,6 @@
             <h3 class="title">Quick links</h3>
             <ul>
               <li><a href="index.html"> Home</a> </li>
-
               <li><a href="about.html"> About Us</a> </li>
               <li><a href="gallery.html"> Gallery</a> </li>
               <li><a href="blog.html"> Blog</a> </li>
@@ -215,12 +174,31 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="footer-widget Newsletter">
+            <h3 class="title">Join Our News Letter</h3>
+            <form >
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Your Email Address">
+              </div>
+              <input type="submit" class="sigup" value="Subscribe">
+            </form>
+          </div>
+        </div>
       </div>
+      
  </div>
   </div>
 <div class="copyright">Copyright © 2021 Clean N Classy. All rights reserved</div>
 </footer>
 <!--Footer End--> 
+<div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
 <script src="js/jquery.min.js"></script> 

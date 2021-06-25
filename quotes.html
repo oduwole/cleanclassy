@@ -1,0 +1,266 @@
+<style>
+    .gqsKaH:hover {
+    box-shadow: rgb(0 0 128 / 34%) 0px 3px 25px;
+    font-weight: 600;
+}
+.gqsKaH {
+    background: rgb(246, 246, 255);
+    border: 1px solid rgba(1, 3, 124, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 4.025em;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(96, 96, 119);
+    font-size: 0.85em;
+    cursor: pointer;
+}
+.iFifWt form .wrapper {
+    padding: 1.6em 2.1em;
+}
+.iFifWt form .wrapper p {
+    font-weight: 400;
+    font-size: 1.25em;
+    color: rgb(55, 55, 55);
+}
+p {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.bar {
+    width: 100%;
+    height: 40px;
+    background: rgb(248, 236, 204);
+    font-weight: 500;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1em;
+    color: rgb(96, 96, 119);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.iFifWt form .wrapper .button__group {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+select{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 25px; 
+}
+
+input[type="button" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: -internal-light-dark(black, white);
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.selected{
+    background-color: rgb(1, 3, 124); color: white;
+}
+</style>
+<link href="./css/select2.min.css" rel="stylesheet">
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+  </div>
+  <div class="modal-body">
+      <div class="hero__container__form">
+              <div class="sc-kGXeez iFifWt">
+                  <!--<div class="head">Too busy to clean?</div> -->
+                  <div class="bar">Book expert home cleaners at a moment's notice</div>
+                  <form>
+                      <div class="wrapper">
+                          <p>Choose a cleaning type</p>
+                          <div class="cleaning-type button__group">
+                              <input id="regular" class="sc-kpOJdX gqsKaH" type="button" name="cleaning-type" value="regular" style="flex-basis: 32%;">
+                              <input id="spring" class="sc-kpOJdX gqsKaH" type="button" name="cleaning-type" value="spring" style="flex-basis: 32%;">
+                              <input id="fumigation" class="sc-kpOJdX gqsKaH" type="button" name="cleaning-type" value="fumigation" style="flex-basis: 32%;">
+                            </div>
+                            <p>Choose your house type</p>
+                            <div class="apartment-type button__group">
+                                <input id="flat" class="sc-kpOJdX gqsKaH" type="button" name="apartment-type" value="flat" style="flex-basis: 49%;">
+                                <input id="duplex" class="sc-kpOJdX gqsKaH" type="button" name="apartment-type" value="duplex" style="flex-basis: 49%;">
+                            </div>
+                            <div class="select__group">
+                                <div class="column">
+                                    <p>Number of rooms</p>
+                                    <div class="css-1pcexqc-container">
+                                        <div class="css-bg1rzq-control">
+                                            <div class="css-1hwfws3">
+                                                <!--<div class="css-151xaom-placeholder">Number of rooms</div>-->
+                                                <div class="css-1g6gooi">
+                                                    <div class="" style="display: inline-block;">
+                                                        <select id="no_of_rooms" class="gqsKaH">
+                                                            <option value="1 bedroom">1 Bedroom</option>
+                                                            <option value="2 bedroom">2 Bedroom</option>
+                                                            <option value="3 bedroom">3 Bedroom</option>
+                                                            <option value="4 bedroom">4 Bedroom</option>
+                                                            <option value="5 bedroom">5 Bedroom</option>
+                                                            <option value="6 bedroom">6 Bedroom</option>
+                                                            <option value="7 bedroom">7 Bedroom</option>
+                                                            <option value="8 bedroom">8 Bedroom</option>
+                                                            <option value="9 bedroom">9 Bedroom</option>
+                                                            <option value="10 bedroom">10 Bedroom</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--
+                                            <div class="css-1wy0on6">
+                                                <span class="css-bgvzuu-indicatorSeparator"></span>
+                                                <div aria-hidden="true" class="css-16pqwjk-indicatorContainer">
+                                                    <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                        <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        -->
+                                        </div>
+                                        <input name="rooms" type="hidden" value="">
+                                    </div>
+                                </div>
+                                <div class="column"><p>Frequency<br /><code>Cleaning Interval</code></p>
+                                    <div class="css-1pcexqc-container">
+                                        <div class="css-bg1rzq-control">
+                                            <div class="css-1hwfws3">
+                                                <!--<div class="css-151xaom-placeholder">Cleaning Interval</div>-->
+                                                <div class="css-1g6gooi">
+                                                    <div class="" style="display: inline-block;">
+                                                        <select id="frequency" class="gqsKaH">
+                                                            <option value="One Time">One Time</option>
+                                                            <option value="Daily">Daily</option>
+                                                            <option value="Weekly">Weekly</option>
+                                                            <option value="Twice Weekly">Twice Weekly</option>
+                                                            <option value="Monthly">Monthly</option>
+                                                            <option value="Twice Monthly">Twice Monthly</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--
+                                            <div class="css-1wy0on6">
+                                                <span class="css-bgvzuu-indicatorSeparator"></span>
+                                                <div aria-hidden="true" class="css-16pqwjk-indicatorContainer">
+                                                    <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                        <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        -->
+                                        </div>
+                                        <input name="house" type="hidden" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="submit">let's go</button>
+                    </form>
+                </div>
+            </div>
+      </div>
+  <div class="modal-footer">
+      <div class="panel-footer">
+          
+      </div>
+    </div>
+
+<script src="./js/select2.min.js"></script>
+<script>
+    var cleaningType = '';
+    var houseType = '';
+    $(function(e){
+        //$('#no_of_rooms').select2();
+        //$('#frequency').select2();
+        document.querySelectorAll('input').forEach(item => {
+        item.addEventListener('click', event => {
+            console.log(event.target.id)
+            if(event.target.id == 'spring'){
+                $('#fumigation').removeClass('selected');
+                $('#regular').removeClass('selected');
+                $('#spring').addClass('selected');
+                cleaningType = item;
+            } else if(event.target.id == 'fumigation'){
+                $('#fumigation').addClass('selected');
+                $('#regular').removeClass('selected');
+                $('#spring').removeClass('selected'); 
+                cleaningType = item;
+            } else if(event.target.id == 'flat'){
+                $('#flat').addClass('selected');
+                $('#duplex').removeClass('selected');
+                houseType = item;
+            } else if(event.target.id == 'duplex'){
+                $('#duplex').addClass('selected');
+                $('#flat').removeClass('selected');
+                houseType = item;
+            } else if(event.target.id == 'regular'){
+                $('#fumigation').removeClass('selected');
+                $('#regular').addClass('selected');
+                $('#spring').removeClass('selected');
+                cleaningType = item;
+        } else if(event.target.id == 'afixPix'){
+            //$('#output').show();
+        //console.log(item);
+            }else{
+                $('#blah').show();
+                console.log(item);
+            }
+            
+        })
+        console.log(cleaningType);
+        console.log(houseType);
+      })
+
+      function setSelectStyle(){
+
+      }
+    })
+</script>
+            

@@ -73,7 +73,7 @@
               
               <li class="nav-item"><a class="nav-link" href="contact.html"> Contact Us</a></li>
             </ul>
-            <a class="btn btn-primary GetQuote" id="GetQuote" href="javascript:void(0);">Get Quote</a>
+            <a class="btn btn-primary GetQuote" id="GetQuote" data-toggle="modal" href="./quotes.html" data-target="#theModal">Get Quote</a>
           </div>
         </nav>
       </div>
@@ -84,7 +84,7 @@
 <!--Inner Heading Start-->
 <div class="innerHeading">
   <div class="container">
-    <h1></h1>
+    <h1>Contact Us</h1>
   </div>
 </div>
 <!--Inner Heading End--> 
@@ -92,7 +92,7 @@
 <!--mailbox start-->
 <div class="container mt-5">
   <div class="text-center mb-3">
-      <h3>Contact us</h3>
+      <h3></h3>
   </div>
   <div class="row g-2">
       <div class="col-md-4">
@@ -224,12 +224,29 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="footer-widget Newsletter">
+            <h3 class="title">Join Our News Letter</h3>
+            <form >
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Your Email Address">
+              </div>
+              <input type="button" class="btn btn-primary" id="subscribe" value="Subscribe">
+            </form>
+          </div>
+        </div>
       </div>
  </div>
   </div>
 <div class="copyright">Copyright © 2021 Clean N Classy. All rights reserved</div>
 </footer>
 <!--Footer End--> 
+<div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
 
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 

@@ -75,7 +75,7 @@
               
               <li class="nav-item"><a class="nav-link" href="contact.html"> Contact Us</a></li>
             </ul>
-            <a class="btn btn-primary GetQuote" id="GetQuote" href="javascript:void(0);">Get Quote</a>
+            <a class="btn btn-primary GetQuote" id="GetQuote" data-toggle="modal" href="./quotes.html" data-target="#theModal">Get Quote</a>
           </div>
         </nav>
       </div>
@@ -88,7 +88,7 @@
 <!--Inner Heading Start-->
 <div class="innerHeading">
   <div class="container">
-    <h1>Pest infestation shouldn't be one of your worries! <br>We are licensed and adequately equipped to help you get rid of all kinds of pest infestations.</h1>
+    <h1>Our Service</h1>
   </div>
 </div>
 <!--Inner Heading End--> 
@@ -100,8 +100,8 @@
 <div class="about-wrap" id="about">
     <div class="row">
       <div class="col-lg-6">
-        <div class="aboutImg"><img src="images/pestcontrol/pest3.png" alt=""></div>
-        <div class="aboutImg"><img src="images/pestcontrol/pest12.jpg" alt=""></div>
+        <div class="aboutImg"><img src="images/pestcontrol/pest3.png" alt="Clean N Classy Pest Control"></div>
+        <!--<div class="aboutImg"><img src="images/pestcontrol/pest12.jpg" alt=""></div> -->
       </div>
       <div class="col-lg-6">
         <div class="about_box">
@@ -135,6 +135,7 @@
 <!--Inner Content End-->
 
 <!-- Get In Touch start -->
+<!--
 <div class="get-wrap">
   <div class="container">
     <div class="title">
@@ -145,10 +146,12 @@
     <div class="phonewrp"><a href="#">+234 805 173 0803</a></div>
   </div>
 </div>
+-->
 <!-- Get In Touch End -->
 
 
 <!--Newsletter Start-->
+<!--
   <div class="newsletter-wrap wow fadeInUp">
 <div class="container">
 
@@ -172,6 +175,7 @@
     </div>
   </div>
 </div>
+-->
 <!--Newsletter End-->
 
 <!--Footer Start-->
@@ -227,12 +231,29 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="footer-widget Newsletter">
+            <h3 class="title">Join Our News Letter</h3>
+            <form >
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Your Email Address">
+              </div>
+              <input type="button" class="btn btn-primary" id="subscribe" value="Subscribe">
+            </form>
+          </div>
+        </div>
       </div>
  </div>
   </div>
 <div class="copyright">Copyright © 2021 Clean N Classy. All rights reserved</div>
 </footer>
 <!--Footer End--> 
+<div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
 
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 

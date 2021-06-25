@@ -74,7 +74,7 @@
               
               <li class="nav-item"><a class="nav-link" href="contact.html"> Contact Us</a></li>
             </ul>
-            <a class="btn btn-primary GetQuote" id="GetQuote" href="javascript:void(0);">Get Quote</a>
+            <a class="btn btn-primary GetQuote" id="GetQuote" data-toggle="modal" href="./quotes.html" data-target="#theModal">Get Quote</a>
           </div>
         </nav>
       </div>
@@ -134,24 +134,27 @@
       </div>
       <div class="col-lg-6">
         <div class="about_box">
-          <div class="title">
-            <h2>Vision</h2></div>
+          <div>
+            <h2>Vision</h2>
+          </div>
             <p>To be the most preferred and trusted partner for all cleaning, <br> facility maintenance and pest control service needs in Africa</p>
-            <div class="title">
-            <h2>Mission</h2></div>
+            <div>
+            <h2>Mission</h2>
+          </div>
             <p>To deliver world-class cleaning, pest management, and facility maintenance <br> services through professionalism and innovations 
               that provide sustainable and exceptional customer relation experience</p>
-              <div class="title">
-                <h2>Core values</h2></div>
+              <div>
+                <h2>Core values</h2>
+              </div>
               <p>At the heart of our business operations, we hold these values dear:</p>
-            <ul class="bullet">
-            <li>Teamwork</li>
-            <li>Integrity</li>
-            <li>Innovation</li>
-            <li>Professionalism</li>
-            <li>Exceptional customer relation</li>
-            <li>Reliability</li>
-          </ul>
+            <ol type>
+              <li>Teamwork</li>
+              <li>Integrity</li>
+              <li>Innovation</li>
+              <li>Professionalism</li>
+              <li>Exceptional customer relation</li>
+              <li>Reliability</li>
+            </ol>
         </div>
       </div>
     </div>
@@ -216,6 +219,58 @@
   </div>
 </div>
 <!--How it Work Start--> 
+
+
+<!-- customer testimonial start -->
+<section>
+  <div class="title title_center"><h1>Testimonials</h1></div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+  <!-- Carousel indicators -->
+  <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      
+  </ol> <!-- Wrapper for carousel items -->
+  <div class="carousel-inner">
+      <div class="item carousel-item active">
+          <div class="img-box"><img src="images/icon1.jpg" alt=""></div>
+          <p class="testimonial">I requested their services in cleaning my upholstery and they did a perfect job. They came super on time and got right to work. Professional indeed. Highly recommended and would be using their services next time too.</p>
+          <p class="overview"><b>Euphoria Naija</b></p>
+          <div class="star-rating"> </div>
+      </div>
+      <div class="item carousel-item">
+          <div class="img-box"><img src="images/icon1.jpg" alt=""></div>
+          <p class="testimonial">Top-notch services always. Clean N Classy has handled our post-construction cleaning for two years getting better. </p>
+          <p class="overview"><b>Grandeur Property</b></p>
+          <div class="star-rating"> </div>
+      </div>
+      <div class="item carousel-item">
+          <div class="img-box"><img src="images/icon1.jpg" alt=""></div>
+          <p class="testimonial">Good and affordable service with great consumer relationship. Found the company online and they have been offering janitorial service for my office for over 5 months now. </p>
+          <p class="overview"><b>Dipo</b></p>
+          <div class="star-rating"> </div>
+      </div>
+      <div class="item carousel-item">
+        <div class="img-box"><img src="images/icon1.jpg" alt=""></div>
+        <p class="testimonial">Excellent service delivery, reliable home delivery and very affordable. The best in the business of cleaning, fumigation and laundry. Tested and trusted.</p>
+        <p class="overview"><b>Babafemi</b></p>
+        <div class="star-rating"> </div>
+    </div>
+    <div class="item carousel-item">
+      <div class="img-box"><img src="images/icon1.jpg" alt="client"></div>
+      <p class="testimonial">Our gamble with Clean N Classy was worth it. They worked with our budget and delivered exceptionally well. Thank you for your professionalism.</p>
+      <p class="overview"><b>Guest</b></p>
+      <div class="star-rating"> </div>
+    </div>
+  </div>
+  <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
+</div>
+</section>
+<!-- customer testimonial end --> 
 
 <!-- Appointment Start -->
 <section class="appointment-area pt-120 pb-120 bg_img" data-overlay="6">
@@ -287,70 +342,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </div> 
+</section>
 <!-- Appointment End -->
 
 
-<!-- customer testimonial start -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Carousel indicators -->
-  <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-      
-  </ol> <!-- Wrapper for carousel items -->
-  <div class="carousel-inner">
-      <div class="item carousel-item active">
-          <div class="img-box"><img src="https://i.imgur.com/Ur43esv.jpg" alt=""></div>
-          <p class="testimonial">I requested their services in cleaning my upholstery and they did a perfect job. They came super on time and got right to work. Professional indeed. Highly recommended and would be using their services next time too.</p>
-          <p class="overview"><b>Euphoria Naija</b></p>
-          <div class="star-rating"> </div>
-      </div>
-      <div class="item carousel-item">
-          <div class="img-box"><img src="https://i.imgur.com/8RKXAIV.jpg" alt=""></div>
-          <p class="testimonial">Top-notch services always. Clean N Classy has handled our post-construction cleaning for two years getting better. </p>
-          <p class="overview"><b>Grandeur Property</b></p>
-          <div class="star-rating"> </div>
-      </div>
-      <div class="item carousel-item">
-          <div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
-          <p class="testimonial">Good and affordable service with great consumer relationship. Found the company online and they have been offering janitorial service for my office for over 5 months now. </p>
-          <p class="overview"><b>Dipo</b></p>
-          <div class="star-rating"> </div>
-      </div>
-      <div class="item carousel-item">
-        <div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
-        <p class="testimonial">Excellent service delivery, reliable home delivery and very affordable. The best in the business of cleaning, fumigation and laundry. Tested and trusted.</p>
-        <p class="overview"><b>Babafemi</b></p>
-        <div class="star-rating"> </div>
-    </div>
-    <div class="item carousel-item">
-      <div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
-      <p class="testimonial">Our gamble with Clean N Classy was worth it. They worked with our budget and delivered exceptionally well. Thank you for your professionalism.</p>
-      <p class="overview"><b>Guest</b></p>
-      <div class="star-rating"> </div>
-    </div>
-  </div>
-  </div> <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
-</div>
-<!-- customer testimonial end --> 
-
-
-<!-- Get In Touch start -->
-<div class="get-wrap">
-  <div class="container">
-    <div class="title">
-    </div>
-    <p>You will be satisfied with every service you need</p>
-    <div class="callText">Call us! we are available 24/7</div>
-    <div class="phonewrp"><a href="">+234 805 173 0803</a></div>
-  </div>
-</div>
-<!-- Get In Touch End -->
 
 <!-- our happy client -->
 <section id="clients" class="section-bg">
@@ -389,49 +385,20 @@
 <!-- our happy client end -->
 
 
-<!--Newsletter Start-->
-  <div class="newsletter-wrap wow fadeInUp">
-<div class="container">
-
-    <div class="row">
-      <div class="col-lg-5">
-        <div class="title">
-          <h1><span>Stay in Loop</span> Join our Newsletter</h1>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <div class="news-info">
-          <form>
-            <div class="input-group">
-              <input type="text" class="form-control" name="search" placeholder="Your Email Address">
-              <div class="form_icon"><i class="fas fa-envelope"></i></div>
-            </div>
-            <input type="submit" class="sigup" value="Subscribe">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Newsletter End-->
-
-
 <!--Footer Start-->
 <footer class="footer bg-style wow fadeInUp bg_img" data-overlay="6">
+  <h4 class="callText text-center">You will be satisfied with every service you need</h4>
+  <h4 class="callText text-center">Call us! we are available 24/7</h4>
   <div class="container">
     <div class="footer-upper">
       <div class="row" >
-
         <div class="col-lg-3 col-md-3">
           <div class="footer-widget quick-links">
             <h3 class="title">Services</h3>
             <ul>
-              <li><a href=""> Cleaning Services</a> </li>
-              <li><a href="commercial.html">commercial cleaning</a> </li>
               <li><a href="construction.htm">Post Construction cleaning</a> </li>
               <li><a href="upholstery.html">Carpet, Sofa and Upholstery Cleaning</a> </li>
               <li><a href="tenacy.html">End of Tenancy </a> </li>
-              <li><a href="window.html">Window Cleaning</a> </li>
               <li><a href="pest.html">Pest Control </a> </li>
               <li><a href="laundry.html">Laundry and Dry-cleaning </a> </li>
           </div>
@@ -468,12 +435,30 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="footer-widget Newsletter">
+            <h3 class="title">Join Our News Letter</h3>
+            <form >
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Your Email Address">
+              </div>
+              <input type="button" class="btn btn-primary" value="Subscribe">
+            </form>
+          </div>
+        </div>
       </div>
+      
  </div>
   </div>
 <div class="copyright">Copyright © 2021 Clean N Classy. All rights reserved</div>
 </footer>
 <!--Footer End--> 
+<div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
 
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
