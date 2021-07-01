@@ -1,8 +1,25 @@
 (function($) { 
 
+  $.fn.serializeObject = function () {
+    console.log(this);
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function () {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
   $('#GetQuote').on('click', function(e){
-    e.preventDefault();
-    $('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
+    //e.preventDefault();
+    //$('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
   });
 
 $('[data-toggle="offcanvas"]').on('click', function () {

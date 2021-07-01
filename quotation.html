@@ -20,16 +20,81 @@
 <link rel="stylesheet" href="rs-plugin/css/settings.css">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/reset-min.css" rel="stylesheet" />
-<link href="css/tabulous.css" rel="stylesheet" />
+<link href="./css/jquery-ui.css" />
+<link href="./css/toastr.min.css" rel="stylesheet" />
+<!--<link href="css/tabulous.css" rel="stylesheet" />-->
 <style>
+  .submit{
+    margin-top: 10px;
+  }
+  .nav>li>a.active{    
+    background: #FFFFFF !important;
+    color: black;
+  }
+  .nav>li>a.active:hover {
+      background-color: #1890D5 !important;
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
+.nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover,
+    .nav-tabs>li>a:hover,
+    .nav>li>a:hover {
+      background-color: #1890D5;
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
+    
+    /*   Change Color for Inactive Tabs     */
+    .nav-tabs>li>a {
+      background-color: #042189;
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+      height: 100px;
+      max-height: 100px;
+      display: flex;
+    }
 
-#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
-	display: block;
-	padding: 17px 30px;
-	background: #042189 ;
-	text-decoration: none;
-	color: #8478B3;
-}
+    .nav-tabs>li>a>span{
+      font-size: 16px;
+      font-style: normal;
+    font-weight: normal;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px; 
+    }
+
+    label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    color: rgb(55, 55, 55);
+    }
+
+    select.form-control{
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(187, 187, 187, 0.184);
+    background: rgb(250, 250, 250);
+    color: rgb(96, 96, 119);
+    /*padding: 15px 20px;*/
+    font-size: 1em;
+    }
+
+    textarea.form-control, input.form-control{
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(187, 187, 187, 0.184);
+    background: rgb(250, 250, 250);
+    padding: 15px 20px;
+    font-size: 1em;
+    color: rgb(96, 96, 119);
+    }
 </style>
 <title>Cleaning</title>
 </head>
@@ -107,22 +172,138 @@
   <div class="container">
     <!--<div class="pricing_boxes row"> -->
         <div id="tabs">
-            <ul style="width: 900px; margin-left: -30%; justify-content: space-between; -webkit-box-pack: justify;">
-                  <li style="width: 33%;"><a href="#tabs-1" title="">CORPORATES</a></li>
-                  <li style="width: 33%;"><a href="#tabs-2" title="">POST CONSTRUCTION</a></li>
-                  <li style="width: 33%;"><a href="#tabs-3" title="">SPECIAL REQUESTS</a></li>
+            <ul class="nav nav-tabs"><!-- justify-content: space-between; -webkit-box-pack: justify; margin-left: -30%;-->
+                  <li class="nav-item" style="width: 33%;"><a href="#tabs-1" title=""><span>RESIDENCE</span></a></li>
+                  <li class="nav-item" style="width: 33%;"><a href="#tabs-2" title=""><span>COMMERCIAL</span></a></li>
+                  <li class="nav-item" style="width: 33%;"><a href="#tabs-3" title=""><span>SPECIAL SERVICE(S)</span></a></li>
               </ul>
-              <div id="tabs_container">
-                <div id="tabs-1">
-                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p><p>Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
+              <div  class="tab-content" id="tabs_container">
+                <div class="tab-pane active container"  id="tabs-1">
+                  <div class="container">
+                    <form id="residence">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label>Customer Name</label>
+                          <input class="form-control" id="customerName" name="Customer Name" placeholder="Customer Name" />
+                        </div>
+                        <div class="col-sm-6">
+                          <label>Email Address</label>
+                          <input type="email" class="form-control" id="emailAddress" name="Email Address" />
+                        </div>
+                        <div class="col-sm-6">
+                          <label>Address/Closest Landmark</label>
+                          <input class="form-control" id="customerAddress" name="Customer Address" />
+                        </div> 
+                        <div class="col-sm-6">
+                          <label>Service Type</label>
+                          <div class="twrapper">
+                            <select class="form-control large serviceType" name="Service Type">
+                              <option value="- Select -">- Select -</option>
+                              <option value="Post Construction">Post Construction</option>
+                              <option value="Upholstery">Upholstery Cleaning</option>
+                              <option value="Fumigation">Pest Control & Fumigation</option>
+                              <option value="Regular Cleaning">Regular Cleaning</option>
+                            </select>
+                          </div>
+                          
+                        </div> 
+                        <div class="col-sm-6">
+                          <label>Frequency</label>
+                          <div class="wrapper">
+                            <select name="Frequency" class="form-control frequency">
+                              <option value="- Select -">- Select -</option>
+                              <option value="One Off">One Off</option>
+                              <option value="Weekly">Weekly</option>
+                            </select>
+                          </div>
+                        </div> 
+                        
+                        <div class="col-sm-6 selDiv" id="selDiv">
+                          <label id="subLabel"></label>
+                          <div>
+                            <select name="subItem" class="form-control subItem" id="subItem">
+                              <option value="- Select -">- Select -</option>
+                            </select>
+                          </div>
+                        </div> 
+                        
+                        <div class="col-sm-6">
+                          <label>Any Other Information</label>
+                          <div class="wrapper">
+                            <textarea class="form-control" name="Other Information"></textarea>
+                          </div>
+                        </div> 
+                        <div class="col-sm-12">
+                          <button type="button" class="submit" id="residentialBtn"  onClick="save(this.id)"><i class="fa fa-save"></i> SUBMIT</button>
+                        </div>
+                      </div> 
+                    </form>
+                  </div>  
+                  </div>
+                  <div class="tab-pane container"  id="tabs-2">
+                    <div class="container">
+                      <form id="commercial">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label>Company Name</label>
+                            <input class="form-control" id="companyName" name="companyName" placeholder="Company Name" />
+                          </div>
+                          <div class="col-sm-6">
+                            <label>Company Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" />
+                          </div>
+                          <div class="col-sm-6">
+                            <label>Address/Closest Landmark</label>
+                            <input class="form-control" id="customerName" name="customerName" />
+                          </div> 
+                          <div class="col-sm-6">
+                            <label>Service Type</label>
+                            <div class="twrapper">
+                              <select class="form-control large serviceType" name="serviceType">
+                                <option value="- Select -">- Select -</option>
+                                <option value="Post Construction">Post Construction</option>
+                                <option value="Upholstery">Upholstery Cleaning</option>
+                                <option value="Fumigation">Pest Control & Fumigation</option>
+                                <option value="Regular Cleaning">Regular Cleaning</option>
+                              </select>
+                            </div>
+                            
+                          </div> 
+                          <div class="col-sm-6">
+                            <label>Frequency</label>
+                            <div class="wrapper">
+                              <select name="frequency" class="form-control frequency">
+                                <option value="- Select -">- Select -</option>
+                                <option value="One Off">One Off</option>
+                                <option value="Weekly">Weekly</option>
+                              </select>
+                            </div>
+                          </div> 
+                          
+                          <div class="col-sm-6 selDiv" id="selDiv">
+                            <label id="subLabel"></label>
+                            <div>
+                              <select name="subItem" class="form-control subItem" id="subItem">
+                                <option value="- Select -">- Select -</option>
+                              </select>
+                            </div>
+                          </div> 
+                          
+                          <div class="col-sm-6">
+                            <label>Any Other Information</label>
+                            <div class="wrapper">
+                              <textarea class="form-control" name="Other Information"></textarea>
+                            </div>
+                          </div> 
+                          <div class="col-sm-12">
+                            <button type="button" class="submit btn btn-danger" id="commercialBtn"  onClick="save(this.id)"><i class="fa fa-save"></i> SUBMIT</button>
+                          </div>
+                        </div>
+                      </form> 
+                    </div> 
+                  </div>
     
-            <div id="tabs-2">
-                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
-        
-            </div>
-    
-            <div id="tabs-3">
+            <div class="tab-pane container"  id="tabs-3">
                     <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
             </div>
               </div><!--End tabs container-->	
@@ -216,6 +397,7 @@
 <script src="js/jquery.min.js"></script> 
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
 <!-- Owl Carousel --> 
@@ -224,7 +406,6 @@
 <script src="js/jquery.fancybox.min.js"></script> 
 <!-- wow js --> 
 <script src="js/animate.js"></script> 
-<script src="js/jquery.nice-select.js"></script> 
 <script src="js/jquery.flexslider.js"></script> 
 <script>
   new WOW().init();
@@ -233,14 +414,178 @@
 <script src="js/wow.js"></script> 
 <script src="js/script.js"></script>
 <script src="js/tabulous.js"></script>
+<script src="js/toastr.min.js"></script>
 <script>
-    $(document).ready(function ($) {
+  function save(clicked_id)
+  {
+    var saveFrm = null; 
+      if(clicked_id === 'commercialBtn'){
+        saveFrm = JSON.stringify($("#commercial").serializeObject());
+      }else if(clicked_id === 'residentialBtn'){
+        saveFrm = JSON.stringify($("#residence").serializeObject());
+      }
+      try {
+        if (JobCategoryForm === null) {
+          finalObj = JSON.parse(saveFrm);
+        } else {
+          var finalObj = $.extend(JobCategoryForm, JSON.parse(saveFrm));
+        }
+      } catch {
+        finalObj = JSON.parse(saveFrm); 
+      } 
+      var selector = $('<table id="excelDataTable" border="1"></table>');
+    console.log(finalObj);
+    var smesg = [];
+    //smesg.push(finalObj);
+    for(var i in finalObj){
+        smesg.push([i, finalObj [i]]);
+        
+    }
+    var user = $('input[name="Email Address"]').val();
+    var messages = buildHtmlTable(selector, smesg);
+    console.log(smesg);
+    //var TrainingUrl =  'https://app.damorelcouture.com/sendmail';
+    var TrainingUrl =  'sendmail';
+    var mailOptions = {
+            from: 'segxy2708@hotmail.com',
+            //to: 'segun@impartlab.com',
+            to: user,
+            //to: 'segun@impartlab.com',
+            subject: 'Clean \'N\' Classy Quotation',
+            //text: JSON.stringify(finalObj)
+            html: JSON.stringify(messages)
+          };
+    $.ajax({
+            url: TrainingUrl,
+            type: 'POST',
+            data: JSON.stringify(mailOptions),
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                // Do something with the result
+                toastr.success(' Quotation details submitted. Please kindly check your email address');
+                //$('#addTrainingForm').pleaseWait('stop');
+            },
+            error: function (xhr, status, error) {
+                //$('#addTrainingForm').pleaseWait('stop');
+                toastr.error(error);
+            }
+        });
+      //var saveFrm = JSON.stringify($("#addJobCategoryForm").serializeObject());
+  }
+    
+  
+  
+function buildHtmlTable(selector, myList) {
+  var columns = addAllColumnHeaders(myList, selector);
+console.log(myList);
+  var sels ='<p>The followings are the details for Clean N Classy quotation request</p> '+
+     '<table>';
+  for (var i = 0; i < myList.length; i++) {
+    var row$ = '<tr>'; //$('<tr/>');
+    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+      var cellValue = myList[i][columns[colIndex]];
+      if (cellValue == null) cellValue = "";
+	row$ +=('<td>');
+	row$ +=(cellValue);
+	row$ +=('</td>');
+     // row$  +=(('<td/>'));//.html(cellValue));
+    }
+sels += row$;
+    //$(selector).append(row$);
+  }
+sels += '</table>'
+return sels;
+}
 
-$('#tabs').tabulous({
-    effect: 'flip'
-});  
+// Adds a header row to the table and returns the set of columns.
+// Need to do union of keys from all records as some records may not contain
+// all records.
+function addAllColumnHeaders(myList, selector) {
+  var columnSet = [];
+  var headerTr$ = $('<tr/>');
+
+  for (var i = 0; i < myList.length; i++) {
+    var rowHash = myList[i];
+    for (var key in rowHash) {
+      if ($.inArray(key, columnSet) == -1) {
+        columnSet.push(key);
+        headerTr$.append($('<th/>').html(key));
+      }
+    }
+  }
+  $(selector).append(headerTr$);
+
+  return columnSet;
+}
+   
+
+  $(document).ready(function ($) {
+      var $selDiv = $('.selDiv');
+      var $optSel = $('#subItem');
+      $selDiv.hide();
+      $('.nav-tabs a:first').tab('show')
+     $('.nav-tabs a').click(function(){
+       $(this).tab('show');
+      }) 
+
+      $('.wrapper').on('change', 'select', function(e) {
+        var sortBy = $(".frequency").val();
+        console.log(sortBy);
+      })
+
+      $('.twrapper').on('change', 'select', function(e) {
+        var sortBy = $(".serviceType").val();
+        console.log(sortBy);
+        setServiceTypeOption(sortBy);
+      })
+
+      function setServiceTypeOption(option){
+        $selDiv.show();
+        var data = [];
+        var postConstruction = [
+          '5 Bedroom Duplex','4 Bedroom Duplex', '3 Bedroom Duplex',
+          '5 Bedroom Apartment','4 Bedroom Apartment', '3 Bedroom Apartment',
+          '2 Bedroom Apartment','1 Bedroom Apartment','Event Centre & Hall',
+          'Warehouse', 'Other Properties']
+         var fumigation = [
+          '5 Bedroom Duplex','4 Bedroom Duplex', '3 Bedroom Duplex',
+          '5 Bedroom Apartment','4 Bedroom Apartment', '3 Bedroom Apartment',
+          '2 Bedroom Apartment','1 Bedroom Apartment', 'Termite & Bed Bug Control', 'Event Centre & Hall',
+          'Warehouse', 'Lawn & Drainages', 'Other Properties']
+        var upholstery = [
+          'Room Size Carpet/Rug (12x12, 12x14)', 'Room Size Carpet/Rug (10x12)',
+          'Small Rug', 'Medium Rug', 'Large Rug', 'Standard Sofa Cleaning (7 Seaters)',
+          '6 Seaters Sofa Cleaning','3 Seater Sofa Cleaning', 'Double Seater', 'Single Seater',
+          'Ottoman - Large (Table Size)', 'Ottoman - Medium Size', 'Ottoman - Stool Size',
+          'Dinning Chairs (6 Pieces)', 'Dinning Chairs (4 Pieces)', 'Mattress (Big)',
+          'Mattress (Medium)', 'Mattress (Small)', 'Leather Sofa Cleaning', 'Hall, Stairs and Other Carpets'
+        ]
+        $('#subLabel').html('Item');
+
+        
+        if(option === 'Upholstery'){
+          data = upholstery;
+        }else if(option === 'Fumigation'){
+          data = fumigation;
+        }else{
+          data = postConstruction;
+        }
+    var $option;
+        $optSel.empty();
+        $optSel.append('<option value="- select -">- select -</option>');
+        for (var counter = 0; counter <= data.length - 1; counter++) {
+            //console.log(counter);
+            $option = $('<option value="' + data[counter] + '">' + data[counter] + '</option>');
+
+            $optSel.append($option);
+        }
+        //$optSel.select2({ width: '50%' }); 
+      }
 
 });
 </script>
+
+<!--<script src="js/jquery.nice-select.js"></script>-->
 </body>
 </html>
