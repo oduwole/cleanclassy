@@ -22,6 +22,29 @@
     //$('#theModal').modal('show').find('.modal-content').load($(this).attr('href'));
   });
 
+  //Service Type
+
+  $('.confirm-appointment').on('click', function(e){
+    var saveFrm = JSON.stringify($("#confirm-appointment-form").serializeObject());
+    try {
+      if (frm === null) {
+        finalObj = JSON.parse(saveFrm);
+      } else {
+        var finalObj = $.extend(frm, JSON.parse(saveFrm));
+      }
+    } catch {
+      finalObj = JSON.parse(saveFrm); 
+    }
+    
+    var smesg = [];
+    //smesg.push(finalObj);
+    for(var i in finalObj){
+        smesg.push([i, finalObj [i]]);
+        
+    }
+    console.log(smesg)
+  })
+
 $('[data-toggle="offcanvas"]').on('click', function () {
     $('.navbar-collapse').toggleClass('show');
     });

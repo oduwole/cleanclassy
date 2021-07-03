@@ -2351,8 +2351,22 @@ section.our_team_wrap .team_member{margin-bottom: 20px; margin-left: auto; margi
      .four-zero-page h2{font-size: 150px;}
      .four-zero-page h3{font-size: 24px; letter-spacing: 5px;}
      .four-zero-page{padding-bottom: 0;}
+
+}
+
+@media screen and (max-width: 400px) {
+    .carousel {
+        width: 300px !important;
+        margin: 0 auto;
+        padding-bottom: 50px
+    }
 }
 @media screen and (max-width: 480px){
+    .carousel {
+        width: 360px !important;
+        margin: 0 auto;
+        padding-bottom: 50px
+    }
     .four-zero-page p{letter-spacing: 0;}
     .four-zero-page h3{font-size: 18px; letter-spacing: 2px;}
     .four-zero-page h2{font-size: 70px;}

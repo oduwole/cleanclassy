@@ -18,7 +18,12 @@
 <!-- Jquery Fancybox CSS -->
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" media="screen" />
 <link rel="stylesheet" href="rs-plugin/css/settings.css">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+<style>
+  ol{
+    list-style: square;
+  }
+</style>
 <title>Clean N Classy</title>
 </head>
 <body>
@@ -97,7 +102,7 @@
         <div class="caption lfb large-title tp-resizeme slidertext4" data-x="240" data-y="400" data-speed="600" data-start="4100"><a href="contact.html">Contact Us </a></div>
       </li>
 
-      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" alt="" src="images/dummy.png" data-lazyload="images/pestcontrol/pest9.png">
+      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" alt="" src="images/dummy.png" data-lazyload="images/pestcontrol/footer7.jpg">
         <div class="caption lft large-title tp-resizeme slidertext_hover" data-x="left" data-y="180" data-speed="600" data-start="1600">Welcome to Clean N Classy</div>
         <div class="caption lft large-title tp-resizeme slidertext2" data-x="left" data-y="190" data-speed="600" data-start="2200">Commercial Cleaning</div>
         <div class="caption lfb large-title tp-resizeme slidertext3" data-x="left" data-y="310" data-speed="600" data-start="2800">You come first always, we are ready to attend to your needs with detailed attention<br/> and professionalism.
@@ -106,7 +111,7 @@
         <div class="caption lfb large-title tp-resizeme slidertext4" data-x="240" data-y="400" data-speed="600" data-start="4100"><a href="contact.html">Contact Us </a></div>
       </li>
 
-      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" alt="" src="images/dummy.png" data-lazyload="images/pestcontrol/footer7.jpg">
+      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" alt="" src="images/dummy.png" data-lazyload="images/pestcontrol/pest9.png">
         <div class="caption lft large-title tp-resizeme slidertext_hover" data-x="left" data-y="180" data-speed="600" data-start="1600">Welcome to Clean N Cleaning</div>
         <div class="caption lft large-title tp-resizeme slidertext2" data-x="left" data-y="190" data-speed="600" data-start="2200">Pest Control</div>
         <div class="caption lfb large-title tp-resizeme slidertext3" data-x="left" data-y="310" data-speed="600" data-start="2800">We are committed to keeping you happy/satisfied with our all-round cleaning and<br/> pest control services.</div>
@@ -148,7 +153,7 @@
                 <h2>Core values</h2>
               </div>
               <p>At the heart of our business operations, we hold these values dear:</p>
-            <ol type>
+            <ol>
               <li>Teamwork</li>
               <li>Integrity</li>
               <li>Innovation</li>
@@ -223,7 +228,7 @@
 
 
 <!-- customer testimonial start -->
-<section>
+<!--<section>-->
   <div class="title title_center"><h1>Testimonials</h1></div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   
@@ -270,7 +275,7 @@
   </div>
   <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
 </div>
-</section>
+<!--</section>-->
 <!-- customer testimonial end --> 
 
 <!-- Appointment Start -->
@@ -285,7 +290,7 @@
                         <div class="appointment-form">
                             <div role="form" class="wpcf7">
 <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-<form>
+<form id="confirm-appointment-form">
 <div class="row mt-none-30">
 
 <div class="col-lg-4 col-md-4">
@@ -302,7 +307,7 @@
 
 <div class="col-lg-4 col-md-4">
 <div class="form-group">
-    <input type="text" name="phone" class="form-control"placeholder="Your Phone">
+    <input type="text" name="Phone No" class="form-control"placeholder="Your Phone">
   </div>
 </div>
 
@@ -313,25 +318,30 @@
 
 <div class="col-lg-4 col-md-4">
 <div class="form-group">
-                <div class="nice-select wide select_option" tabindex="0"> <span class="current">Select Category</span>
+  <select class="form-control select_option" name="Service Type">
+    <option value="- select -">- Select Service Type -</option>
+    <option value="Commercial Services">Commercial Services</option>
+    <option value="Residential Service">Residential Service</option>
+  </select>
+  <!--<div class="nice-select wide select_option" tabindex="0"> <span class="current">Select Category</span>
                   <ul class="list">
                     <li data-value="Property Status" data-display="Property Status" class="option selected focus">Property Status</li>
                     <li data-value="service01" class="option">Commercial Services</li>
-                    <li data-value="service02" class="option">Ressidential Services</li>
+                    <li data-value="service02" class="option">Residential Services</li>
                   </ul>
-                </div>
-              </div>
+                </div>-->
+  </div>
 </div>
 
 <div class="col-lg-4 col-md-4">
 <div class="form-group">
-    <input type="date" name="phone" class="form-control"placeholder="Your Phone">
+    <input type="date" name="date" class="form-control"placeholder="Date">
   </div>
 </div>
 
 <div class="col-lg-12 col-md-12">
   <div class="form-group appoint_btn">
-<button type="submit" class="submit-btn">Confirm Appointment</button>
+<button type="button" id="confirm-appointment" name="confirm-appointment" class="confirm-appointment submit-btn">Confirm Appointment</button>
 
   </div>
 
@@ -482,5 +492,8 @@
 <!-- general script file --> 
 <script src="js/wow.js"></script> 
 <script src="js/script.js"></script>
+<script>
+  //alert($(window).width())
+</script>
 </body>
 </html>

@@ -3,14 +3,15 @@ var express = require('express'),
     nodemailer = require('nodemailer'),
     fs = require('fs'),
     https = require("https"),
-    bodyParser = require('body-parser'); // ,
+    bodyParser = require('body-parser'),
+    mysql = require('mysql'); // ,
     // multer = require('multer'); //,
 //request = require('request'),
 //cors = require('cors');
 
 /*const ssl_options = {
-    key: fs.readFileSync("/etc/letsencrypt/live/app.damorelcouture.com/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/app.damorelcouture.com/fullchain.pem")
+    key: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/fullchain.pem")
   };*/
 
 var app = express();
