@@ -4,7 +4,9 @@ var express = require('express'),
     fs = require('fs'),
     https = require("https"),
     bodyParser = require('body-parser'),
-    mysql = require('mysql'); // ,
+    mysql = require('mysql'),
+    mailer = require('./mailer.js'); // ,
+    var maiB = require('./mailt.js');
     // multer = require('multer'); //,
 //request = require('request'),
 //cors = require('cors');
@@ -13,6 +15,87 @@ var express = require('express'),
     key: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/privkey.pem"),
     cert: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/fullchain.pem")
   };*/
+
+  
+
+  var con = mysql.createConnection({
+    host: "54.195.164.201",
+    user: "oduwole",
+    password: "Se0103?2015gun"
+  });
+
+  
+  var cond = mysql.createConnection({
+    host: "54.195.164.201",
+    user: "oduwole",
+    password: "Se0103?2015gun",
+    database: "cleanclassydb"
+  });
+
+  /*var con = initializeConnection({
+    host: "54.195.164.201",
+    user: "oduwole",
+    password: "Se0103?2015gun"
+});*/
+
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    con.query("CREATE DATABASE IF NOT EXISTS cleanclassydb", function (err, result) {
+        if (err) throw err;
+        console.log("CLean N ClassyDatabase created");
+      });
+  });
+
+  cond.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    var sql = "CREATE TABLE  IF NOT EXISTS customers (id INT AUTO_INCREMENT PRIMARY KEY,phoneNo VARCHAR(255), name VARCHAR(255), address VARCHAR(255)," +
+    " email VARCHAR(255), service_type VARCHAR(255), frequency VARCHAR(255), item VARCHAR(255), " + 
+    " other_information VARCHAR(255))";
+    cond.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Table created");
+    });
+    //cond.end();
+  });
+
+  function insertNewCustomer(input){
+    //cond.connect(function(err) {
+       // if (err) throw err;
+        console.log("Connected!");
+        var sql = "INSERT INTO customers (name, address, email, phoneNo, service_type, frequency, item, other_information) VALUES (" + input + ")";
+        cond.query(sql, function (err, result) {
+          if (err) throw err;
+          console.log("1 record inserted");
+        });
+      //});
+  }
+  
+  function initializeConnection(config) {
+    function addDisconnectHandler(connection) {
+        connection.on("error", function (error) {
+            if (error instanceof Error) {
+                if (error.code === "PROTOCOL_CONNECTION_LOST") {
+                    console.error(error.stack);
+                    console.log("Lost connection. Reconnecting...");
+
+                    initializeConnection(connection.config);
+                } else if (error.fatal) {
+                    throw error;
+                }
+            }
+        });
+    }
+
+    var connection = mysql.createConnection(config);
+
+    // Add handlers.
+    addDisconnectHandler(connection);
+
+    connection.connect();
+    return connection;
+}
 
 var app = express();
 var staticRoot = __dirname + '/';
@@ -81,22 +164,38 @@ app.get('/syear', function (req, res) {
     
 });
 
+app.post('/sendmailTemp', function(req,res){
+var locals = { name: "New User", siteName: "Codemoto" };
+console.log(req.body.to);
+mailer.sendMail('info@cleanclassy.com', req.body.to, req.body.subject, 'template', locals).then(function () {
+  res.status(200).send('A welcome email has been sent to ' + user.email + '.');
+}, function (err) {
+  if (err) { return res.status(500).send({ msg: err.message }); }
+});
+})
 
 app.post('/sendmail', function (req, res) {
     var cred = {
         //service: 'gmail',
-        host: "smtp.live.com",
-        port: 587,
-        secure: false,
+        //host: "smtp.live.com",
+        host:'smtp.zoho.com',
+        //port: 587,
+        port: 465,
+        secure: true,
+        //secure: false,
         auth: {
-          user: 'segxy2708@hotmail.com',
-          pass: 'se0103?2015gun'
+          /*user: 'segxy2708@hotmail.com',
+          pass: 'se0103?2015gun'*/
+          user: 'info@cleanclassy.com',
+          pass: 'Classy22$'
         }
       };
     var transporter = nodemailer.createTransport(cred);
       console.log(cred.auth.pass);
       // var mailOptions = mailOptions;
       console.log(req.body);
+      var body = maiB.getMailMessage(req.body.name)
+      req.body.html = body;
       transporter.sendMail(req.body, function(error, info){
         if (error) {
           console.log(error);
@@ -107,6 +206,26 @@ app.post('/sendmail', function (req, res) {
       });
     
 });
+
+app.post('/customer', function (req, res) {
+    console.log(req.body);
+    var myreq = JSON.parse(JSON.stringify(req.body));
+    var name =myreq['Customer Name'];
+    var email = myreq['Email Address']
+    var address = myreq['Customer Address'];
+    var phone = myreq['Phone Number'];
+    var service_type = myreq['Service Type'];
+    var frequency = myreq['Frequency'];
+    var other_information = myreq['Other Information'];
+    var item = myreq['subItem']
+    console.log(name);
+    //name, address, email, phoneNo, service_type, frequency, item, other_information
+    var val = '\'' + name + '\' , \'' + address  + '\' , \'' + email  + '\' , \'' + phone + '\' , \''
+    + service_type + '\' , \'' + frequency + '\' , \'' + item + '\' , \'' + other_information + '\''  ;
+    console.log(val);
+    insertNewCustomer(val);
+    res.json(req.body);
+})
 
 app.get('/.well-known/acme-challenge/ze-PRqixpXjGN_miG4pWocluPzI1HO9ABUWwh_E8-gI', function (req, res) {
     // conole.log('requesting about page');

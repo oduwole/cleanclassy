@@ -193,6 +193,10 @@
                           <input type="email" class="form-control" id="emailAddress" name="Email Address" />
                         </div>
                         <div class="col-sm-6">
+                          <label>Customer Phone Number</label>
+                          <input class="form-control" id="customerPhoneNo" name="Phone Number" placeholder="Customer Phone Number" />
+                        </div>
+                        <div class="col-sm-6">
                           <label>Address/Closest Landmark</label>
                           <input class="form-control" id="customerAddress" name="Customer Address" />
                         </div> 
@@ -255,13 +259,17 @@
                             <input type="email" class="form-control" id="emailAddress" name="emailAddress" />
                           </div>
                           <div class="col-sm-6">
+                            <label>Company Phone Number</label>
+                            <input class="form-control" id="companyPhoneNo" name="Phone Number" placeholder="Company Phone Number" />
+                          </div>
+                          <div class="col-sm-6">
                             <label>Address/Closest Landmark</label>
-                            <input class="form-control" id="customerName" name="customerName" />
+                            <input class="form-control" id="companyAddress" name="Customer Address" placeholder="Company Address" />
                           </div> 
                           <div class="col-sm-6">
                             <label>Service Type</label>
                             <div class="twrapper">
-                              <select class="form-control large serviceType" name="serviceType">
+                              <select class="form-control large serviceType" name="Service Type">
                                 <option value="- Select -">- Select -</option>
                                 <option value="Post Construction">Post Construction</option>
                                 <option value="Upholstery">Upholstery Cleaning</option>
@@ -274,7 +282,7 @@
                           <div class="col-sm-6">
                             <label>Frequency</label>
                             <div class="wrapper">
-                              <select name="frequency" class="form-control frequency">
+                              <select name="Frequency" class="form-control frequency">
                                 <option value="- Select -">- Select -</option>
                                 <option value="One Off">One Off</option>
                                 <option value="Weekly">Weekly</option>
@@ -444,18 +452,21 @@
         
     }
     var user = $('input[name="Email Address"]').val();
+    var name = $('input[name="Email Address"]').val();
     var messages = buildHtmlTable(selector, smesg);
     console.log(smesg);
     //var TrainingUrl =  'https://app.damorelcouture.com/sendmail';
-    var TrainingUrl =  'sendmail';
+    var TrainingUrl =  'sendmail'; //'sendmailTemp'; // 
     var mailOptions = {
-            from: 'segxy2708@hotmail.com',
+            from: 'info@cleanclassy.com',
             //to: 'segun@impartlab.com',
             to: user,
+            bcc: 'cleanclassy@gmail.com',
             //to: 'segun@impartlab.com',
             subject: 'Clean \'N\' Classy Quotation',
             //text: JSON.stringify(finalObj)
-            html: JSON.stringify(messages)
+            html: JSON.stringify(messages),
+            name: name
           };
     $.ajax({
             url: TrainingUrl,
@@ -465,7 +476,8 @@
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 // Do something with the result
-                toastr.success(' Quotation details submitted. Please kindly check your email address');
+                //toastr.success(' Quotation details submitted. Please kindly check your email address');
+                save2DB(finalObj);
                 //$('#addTrainingForm').pleaseWait('stop');
             },
             error: function (xhr, status, error) {
@@ -476,7 +488,26 @@
       //var saveFrm = JSON.stringify($("#addJobCategoryForm").serializeObject());
   }
     
-  
+  function save2DB(value){
+    console.log(value);
+    var url =  'customer';
+    $.ajax({
+            url: url,
+            type: 'POST',
+            data: JSON.stringify(value),
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                // Do something with the result
+                toastr.success(' Quotation details submitted. Please kindly check your email address supplied for more details');
+                //$('#addTrainingForm').pleaseWait('stop');
+            },
+            error: function (xhr, status, error) {
+                //$('#addTrainingForm').pleaseWait('stop');
+                toastr.error(error);
+            }
+        });
+  }
   
 function buildHtmlTable(selector, myList) {
   var columns = addAllColumnHeaders(myList, selector);
