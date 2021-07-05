@@ -43,6 +43,7 @@
         
     }
     console.log(smesg)
+    var selector = $('<table id="excelDataTable" border="1"></table>');
 
     var user = $('input[name="email"]').val();
     var name = $('input[name="Customer Name"]').val();
