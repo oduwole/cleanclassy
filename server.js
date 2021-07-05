@@ -6,6 +6,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mysql = require('mysql'),
     mailer = require('./mailer.js'); // ,
+const { getMailMessage } = require('./mailt.js');
     var maiB = require('./mailt.js');
     // multer = require('multer'); //,
 //request = require('request'),
@@ -174,6 +175,21 @@ mailer.sendMail('info@cleanclassy.com', req.body.to, req.body.subject, 'template
 });
 })
 
+app.get('/sendmail', function (req, res) {
+    //this.Name = 'Oduwole Oluwasegun'
+    var val = {
+        name: 'Oduwole Oluwasegun',
+        bcc: "cleanclassy@gmail.com",
+        from: "info@cleanclassy.com",
+        html: "\"<p>The followings are the details for Clean N Classy quotation request</p> <table><tr><td>Customer Name</td><td>ODUWOLE OLUWASEGUN</td><tr><td>Email Address</td><td>segxy2708@yahoo.com</td><tr><td>Phone Number</td><td>08027609274</td><tr><td>Customer Address</td><td>136 APATA STREET SOMOLU LAGO</td><tr><td>Service Type</td><td>- Select -</td><tr><td>Frequency</td><td>- Select -</td><tr><td>subItem</td><td>- Select -</td><tr><td>Other Information</td><td></td></table>\"",
+        subject: "Clean 'N' Classy Quotation",
+        to: "segxy2708@yahoo.com"
+    }
+    var mm = getMailMessage(val);
+
+    return res.json(mm);
+});
+
 app.post('/sendmail', function (req, res) {
     var cred = {
         //service: 'gmail',
@@ -194,7 +210,7 @@ app.post('/sendmail', function (req, res) {
       console.log(cred.auth.pass);
       // var mailOptions = mailOptions;
       console.log(req.body);
-      var body = maiB.getMailMessage(req.body.name)
+      var body = maiB.getMailMessage(req.body)
       req.body.html = body;
       transporter.sendMail(req.body, function(error, info){
         if (error) {

@@ -43,7 +43,69 @@
         
     }
     console.log(smesg)
+
+    var user = $('input[name="email"]').val();
+    var name = $('input[name="Customer Name"]').val();
+    var phoneNo = $('input[name="Phone No"]').val();
+    var address = $('input[name="address"]').val();
+    var messages = buildHtmlTable(selector, smesg);
+    console.log(smesg);
+    //var TrainingUrl =  'https://app.damorelcouture.com/sendmail';
+    var TrainingUrl =  'sendmail'; //'sendmailTemp'; // 
+    var mailOptions = {
+            from: 'info@cleanclassy.com',
+            //to: 'segun@impartlab.com',
+            to: 'cleanclassy@gmail.com',
+            bcc: 'segxy2708@hotmail.com',
+            //to: 'segun@impartlab.com',
+            subject: 'Clean \'N\' Classy Appointment',
+            //text: JSON.stringify(finalObj)
+            html: JSON.stringify(messages),
+            name: name
+          };
+          console.log(mailOptions);
+    $.ajax({
+            url: TrainingUrl,
+            type: 'POST',
+            data: JSON.stringify(mailOptions),
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                // Do something with the result
+                //toastr.success(' Quotation details submitted. Please kindly check your email address');
+                save2DB(finalObj);
+                //$('#addTrainingForm').pleaseWait('stop');
+            },
+            error: function (xhr, status, error) {
+                //$('#addTrainingForm').pleaseWait('stop');
+                toastr.error(error);
+            }
+        });
+      //var saveFrm = JSON.stringify($("#addJobCategoryForm").serializeObject());
+      
   })
+
+  function save2DB(value){
+    console.log(value);
+    var url =  'customer';
+    $.ajax({
+            url: url,
+            type: 'POST',
+            data: JSON.stringify(value),
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                // Do something with the result
+                toastr.success(' Appointment booking submitted.');
+                //$('#addTrainingForm').pleaseWait('stop');
+            },
+            error: function (xhr, status, error) {
+                //$('#addTrainingForm').pleaseWait('stop');
+                toastr.error(error);
+            }
+        });
+  }
+  
 
 $('[data-toggle="offcanvas"]').on('click', function () {
     $('.navbar-collapse').toggleClass('show');

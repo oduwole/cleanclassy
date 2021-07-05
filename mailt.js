@@ -1,5 +1,10 @@
-var Name = '';
-var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'+
+
+//exports.Name = Name;
+module.exports = {
+    getMailMessage: function(val){
+        console.log(val.name);
+        var Name = val.name;
+        var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'+
 '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">'+
 '<head>'+
 '<!--[if gte mso 9]>'+
@@ -198,7 +203,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:35px 44px 10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="color: #34495e; line-height: 140%; text-align: left; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 22px; line-height: 30.8px;">Dear '+ Name +',</span></p>'+
+'    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 22px; line-height: 30.8px;">Dear ' + Name +',</span></p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -212,11 +217,13 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 44px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: left; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">At brandingcompany, we get asked a lot, “What is branding?”</p>'+
-'<p style="font-size: 14px; line-height: 190%;">Once you understand it, it’s a simple idea, but it’s powerful in its effects on your business. </p>'+
-'<p style="font-size: 14px; line-height: 190%;"> </p>'+
-'<p style="font-size: 14px; line-height: 190%;">When you’re building your brand, you need to approach it step-by-step.</p>'+
-'<p style="font-size: 14px; line-height: 190%;">At BrandSpecialist, we start with a six-step process that guides our work: </p>'+
+'    <p style="font-size: 14px; line-height: 190%;">Clean N Classy is a professional cleaning consulting firm for all-round cleaning services, pest control, and facility maintenance. We offer a broad range of services that ensures our clients are satisfied and happy always.</p>'+
+''+
+'<p style="font-size: 14px; line-height: 190%;"> </p>'+ val.html
++
+'<div id="request">'+
+'    '+
+'</div>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -315,7 +322,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/image-9.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      <img align="center" border="0" src="images/step1.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -332,7 +339,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Design</strong></p>'+
+'    <p style="font-size: 14px; line-height: 190%;"><strong>Schedule</strong></p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -346,7 +353,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
+'    <p style="font-size: 14px; line-height: 190%;">Get in touch with us and you will be satisfied with every service you need </p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -358,6 +365,73 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '  </div>'+
 '</div>'+
 '<!--[if (mso)|(IE)]></td><![endif]-->'+
+'<!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->'+
+'<div class="u-col u-col-33p33" style="max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;">'+
+'  <div style="width: 100% !important;">'+
+'  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->'+
+'  '+
+'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
+'  <tbody>'+
+'    <tr>'+
+'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
+'        '+
+'<table width="100%" cellpadding="0" cellspacing="0" border="0">'+
+'  <tr>'+
+'    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
+'      '+
+'      <img align="center" border="0" src="images/step2.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      '+
+'    </td>'+
+'  </tr>'+
+'</table>'+
+''+
+'      </td>'+
+'    </tr>'+
+'  </tbody>'+
+'</table>'+
+''+
+'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
+'  <tbody>'+
+'    <tr>'+
+'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
+'        '+
+'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
+'    <p style="font-size: 14px; line-height: 190%;"><strong>Meet</strong></p>'+
+'  </div>'+
+''+
+'      </td>'+
+'    </tr>'+
+'  </tbody>'+
+'</table>'+
+''+
+'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
+'  <tbody>'+
+'    <tr>'+
+'      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
+'        '+
+'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
+'    <p style="font-size: 14px; line-height: 190%;">You want to deal with only experts and we are insured, licensed and experts of everything we say</p>'+
+'  </div>'+
+''+
+'      </td>'+
+'    </tr>'+
+'  </tbody>'+
+'</table>'+
+''+
+'  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->'+
+'  </div>'+
+'</div>'+
+'    </div>'+
+'  </div>'+
+'</div>'+
+''+
+''+
+''+
+'<div class="u-row-container" style="padding: 0px;background-color: transparent">'+
+'  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f4f4f4;">'+
+'    <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;">'+
+'      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #f4f4f4;"><![endif]-->'+
+'      '+
 '<!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->'+
 '<div class="u-col u-col-33p33" style="max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;">'+
 '  <div style="width: 100% !important;">'+
@@ -389,7 +463,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Strategy</strong></p>'+
+'    <p style="font-size: 14px; line-height: 190%;"><strong>Professional Advices</strong></p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -403,7 +477,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
+'    <p style="font-size: 14px; line-height: 190%;">We will not only be your service provider, but we will also be your consultant in our area of expertise</p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -446,7 +520,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Marketing</strong></p>'+
+'    <p style="font-size: 14px; line-height: 190%;"><strong>Bespoke Service</strong></p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -460,7 +534,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
+'    <p style="font-size: 14px; line-height: 190%;">You matter to us so we place the utmost importance on our relationship with you than on just getting the work done </p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -471,191 +545,6 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->'+
 '  </div>'+
 '</div>'+
-'<!--[if (mso)|(IE)]></td><![endif]-->'+
-'      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->'+
-'    </div>'+
-'  </div>'+
-'</div>'+
-''+
-''+
-''+
-'<div class="u-row-container" style="padding: 0px;background-color: transparent">'+
-'  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f4f4f4;">'+
-'    <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;">'+
-'      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #f4f4f4;"><![endif]-->'+
-'      '+
-'<!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->'+
-'<div class="u-col u-col-33p33" style="max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;">'+
-'  <div style="width: 100% !important;">'+
-'  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->'+
-'  '+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'<table width="100%" cellpadding="0" cellspacing="0" border="0">'+
-'  <tr>'+
-'    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
-'      '+
-'      <img align="center" border="0" src="images/image-14.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
-'      '+
-'    </td>'+
-'  </tr>'+
-'</table>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Social Media</strong></p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->'+
-'  </div>'+
-'</div>'+
-'<!--[if (mso)|(IE)]></td><![endif]-->'+
-'<!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->'+
-'<div class="u-col u-col-33p33" style="max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;">'+
-'  <div style="width: 100% !important;">'+
-'  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->'+
-'  '+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'<table width="100%" cellpadding="0" cellspacing="0" border="0">'+
-'  <tr>'+
-'    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
-'      '+
-'      <img align="center" border="0" src="images/image-11.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
-'      '+
-'    </td>'+
-'  </tr>'+
-'</table>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Brand Material</strong></p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->'+
-'  </div>'+
-'</div>'+
-'<!--[if (mso)|(IE)]></td><![endif]-->'+
-'<!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->'+
-'<div class="u-col u-col-33p33" style="max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;">'+
-'  <div style="width: 100% !important;">'+
-'  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->'+
-'  '+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'<table width="100%" cellpadding="0" cellspacing="0" border="0">'+
-'  <tr>'+
-'    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
-'      '+
-'      <img align="center" border="0" src="images/image-10.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
-'      '+
-'    </td>'+
-'  </tr>'+
-'</table>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;"><strong>Webste</strong></p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'<table style="font-family:\'Open Sans\',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">'+
-'  <tbody>'+
-'    <tr>'+
-'      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 22px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
-'        '+
-'  <div style="line-height: 190%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>'+
-'  </div>'+
-''+
-'      </td>'+
-'    </tr>'+
-'  </tbody>'+
-'</table>'+
-''+
-'  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->'+
-'  </div>'+
-'</div>'+
-'<!--[if (mso)|(IE)]></td><![endif]-->'+
-'      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->'+
 '    </div>'+
 '  </div>'+
 '</div>'+
@@ -739,8 +628,8 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:25px 44px 22px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="line-height: 190%; text-align: left; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 190%; text-align: center;">There are infinite steps in between, but these are the BIG steps that we use to make sure we’re creating everything you need.</p>'+
-'<p style="font-size: 14px; line-height: 190%; text-align: center;">If you’re ready, BraningCompany can help you put it all together. </p>'+
+'    <p style="font-size: 14px; line-height: 190%; text-align: center;">We believe cleanliness and safety facilitate productivity in the office and personal space. This, solely, is our goal and we are committed to it.</p>'+
+'<p style="font-size: 14px; line-height: 190%; text-align: center;">If you’re ready, Clean “N“ Classy  can help you put it all together. </p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -756,7 +645,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '<div align="center">'+
 '  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:\'Open Sans\',sans-serif;"><tr><td style="font-family:\'Open Sans\',sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:46px; v-text-anchor:middle; width:266px;" arcsize="89%" stroke="f" fillcolor="#54c5cd"><w:anchorlock/><center style="color:#FFFFFF;font-family:\'Open Sans\',sans-serif;"><![endif]-->'+
 '    <a href="" target="_blank" style="box-sizing: border-box;display: inline-block;font-family:\'Open Sans\',sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #54c5cd; border-radius: 41px; -webkit-border-radius: 41px; -moz-border-radius: 41px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;">'+
-'      <span style="display:block;padding:15px 33px;line-height:120%;"><strong>Reach out to BrandCompany</strong></span>'+
+'      <span style="display:block;padding:15px 33px;line-height:120%;"><strong>Reach out to Clean “N“ Classy </strong></span>'+
 '    </a>'+
 '  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->'+
 '</div>'+
@@ -821,7 +710,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:0px 10px 25px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="color: #e4e4eb; line-height: 140%; text-align: center; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 140%;">Talk to us (111) 222-3333 or <br />Email us hello@brandingCompany.com</p>'+
+'    <p style="font-size: 14px; line-height: 140%;">Talk to us <a href="tel:+2348051730803">(234) 805-173-0803</a> or <br />Email us <a href="mailto:info@cleanclassy.com">info@cleanclassy.com</a></p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -842,7 +731,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 20px;" valign="top"><![endif]-->'+
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
-'        <a href="https://facebook.com/" title="Facebook" target="_blank">'+
+'        <a href="https://facebook.com/cleanclassyng" title="Facebook" target="_blank">'+
 '          <img src="images/image-8.png" alt="Facebook" title="Facebook" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
@@ -852,7 +741,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 20px;" valign="top"><![endif]-->'+
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
-'        <a href="https://twitter.com/" title="Twitter" target="_blank">'+
+'        <a href="https://twitter.com/cleanclassyng" title="Twitter" target="_blank">'+
 '          <img src="images/image-6.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
@@ -862,7 +751,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 20px;" valign="top"><![endif]-->'+
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
-'        <a href="https://whatsapp.com/" title="WhatsApp" target="_blank">'+
+'        <a href="https://api.whatsapp.com/send/?phone=08051730803" title="WhatsApp" target="_blank">'+
 '          <img src="images/image-4.png" alt="WhatsApp" title="WhatsApp" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
@@ -872,21 +761,22 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 20px;" valign="top"><![endif]-->'+
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
-'        <a href="https://pinterest.com/" title="Pinterest" target="_blank">'+
-'          <img src="images/image-15.png" alt="Pinterest" title="Pinterest" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'        <a href="https://instagram.com/cleanclassyng" title="Pinterest" target="_blank">'+
+'          <img src="images/instagram.png" alt="instagram" title="instagram" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table>'+
 '    <!--[if (mso)|(IE)]></td><![endif]-->'+
 '    '+
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 0px;" valign="top"><![endif]-->'+
-'    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 0px">'+
+'    '+
+'    <!--<table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 0px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://youtube.com/" title="YouTube" target="_blank">'+
 '          <img src="images/image-3.png" alt="YouTube" title="YouTube" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
-'    </tbody></table>'+
+'    </tbody></table> -->'+
 '    <!--[if (mso)|(IE)]></td><![endif]-->'+
 '    '+
 '    '+
@@ -926,7 +816,7 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '      <td style="overflow-wrap:break-word;word-break:break-word;padding:12px 10px;font-family:\'Open Sans\',sans-serif;" align="left">'+
 '        '+
 '  <div style="color: #ffffff; line-height: 140%; text-align: left; word-wrap: break-word;">'+
-'    <p style="font-size: 14px; line-height: 140%; text-align: center;">© Branding Company. All Rights Reserved</p>'+
+'    <p style="font-size: 14px; line-height: 140%; text-align: center;">© Clean “N“ Classy. All Rights Reserved</p>'+
 '  </div>'+
 ''+
 '      </td>'+
@@ -953,11 +843,9 @@ var myvar = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "ht
 '  <!--[if IE]></div><![endif]-->'+
 '</body>'+
 ''+
-'</html>';
-	
-module.exports = {
-    getMailMessage: function(name){
-        Name = name;
+'</html>'
+
+        //Name = name;
         return myvar;
     }
 }

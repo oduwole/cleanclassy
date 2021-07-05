@@ -452,7 +452,7 @@
         
     }
     var user = $('input[name="Email Address"]').val();
-    var name = $('input[name="Email Address"]').val();
+    var name = $('input[name="Customer Name"]').val();
     var messages = buildHtmlTable(selector, smesg);
     console.log(smesg);
     //var TrainingUrl =  'https://app.damorelcouture.com/sendmail';
@@ -468,6 +468,7 @@
             html: JSON.stringify(messages),
             name: name
           };
+          console.log(mailOptions);
     $.ajax({
             url: TrainingUrl,
             type: 'POST',
@@ -486,6 +487,7 @@
             }
         });
       //var saveFrm = JSON.stringify($("#addJobCategoryForm").serializeObject());
+
   }
     
   function save2DB(value){
