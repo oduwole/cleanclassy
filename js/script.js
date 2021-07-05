@@ -106,6 +106,29 @@
         });
   }
   
+   
+function buildHtmlTable(selector, myList) {
+  var columns = addAllColumnHeaders(myList, selector);
+console.log(myList);
+  var sels ='<p>The followings are the details for Clean N Classy quotation request</p> '+
+     '<table>';
+  for (var i = 0; i < myList.length; i++) {
+    var row$ = '<tr>'; //$('<tr/>');
+    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+      var cellValue = myList[i][columns[colIndex]];
+      if (cellValue == null) cellValue = "";
+	row$ +=('<td>');
+	row$ +=(cellValue);
+	row$ +=('</td>');
+     // row$  +=(('<td/>'));//.html(cellValue));
+    }
+sels += row$;
+    //$(selector).append(row$);
+  }
+sels += '</table>'
+return sels;
+}
+
 
 $('[data-toggle="offcanvas"]').on('click', function () {
     $('.navbar-collapse').toggleClass('show');
