@@ -124,7 +124,7 @@ hr { border-top: 4px solid #CCC; }
     height: 100%;
 }
 
-.navbar-toggler { display: none; }
+/*.navbar-toggler { display: none; }*/
 
 .tm-brand-box {
 	width: 240px;
@@ -686,7 +686,7 @@ select:not([multiple]) {
 		transition: all 0.3s ease;
 	}
 
-	.navbar-toggler {
+	/*.navbar-toggler {
 		display: block;
 		position: fixed;
 		left: 0;
@@ -704,7 +704,7 @@ select:not([multiple]) {
 
 	.navbar-toggler:focus { outline: none; }
 	.tm-sidebar.show { left: 0; }
-	.tm-sidebar.show .navbar-toggler { left: 280px; }
+	.tm-sidebar.show .navbar-toggler { left: 280px; } */
 
 	.tm-parallax {
 		width: 280px;
