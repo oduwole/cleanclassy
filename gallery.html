@@ -8,7 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/figure/bootstrap.min.css">
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
 <link href="css/all.css" rel="stylesheet">
 <!-- Owl Carousel CSS -->
 <link href="css/owl.carousel.css" rel="stylesheet">
@@ -19,7 +20,11 @@
 <!-- Jquery Fancybox CSS -->
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" media="screen" />
 <link rel="stylesheet" href="rs-plugin/css/settings.css">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/gstyle.css" rel="stylesheet">
+<link href="css/tm.css" rel="stylesheet" />
+<link rel="stylesheet" href="slick/slick.min.css">          <!-- https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">  
 <title>Clean N Classy</title>
 </head>
 <body>
@@ -55,7 +60,7 @@
         <nav class="navbar navbar-expand-lg navbar-light"> <a class="navbar-brand" href="#">Navbar</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <button class="close-toggler" type="button" data-toggle="offcanvas"> <span><i class="fas fa-times-circle" aria-hidden="true"></i></span> </button>
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" id="tm-main-nav">
               <li class="nav-item active"><a class="nav-link" href="index.html"> Home </a></li>
               <li class="nav-item"><a class="nav-link" href=""> Services <span class="caret"><i class="fas fa-caret-down"></i></span></a> <i class="fas fa-caret-down"></i>
                 <ul class="submenu">
@@ -98,86 +103,301 @@
 
 <section class="gallery-wrap">
   <div class="container">
-
-    <ul class="row style_none">
-<li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clean N Classy</h3>
+    <div class="tm-section-wrap">
+        <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-02.jpg"></div>                   
+        <section id="gallery" class="tm-section">
+            <!--
+            <h2 class="tm-text-primary">Gallery</h2>
+            <hr class="mb-5">
+        -->
+            <ul class="tm-gallery-links">
+                <li>
+                    <a href="javascript:void(0);" class="active tm-gallery-link" data-filter="*">
+                        <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                        All
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="tm-gallery-link" data-filter="postconstruction">
+                        <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                        Post Construction
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="tm-gallery-link" data-filter="pestcontrol">
+                        <i class="fas fa-paw tm-gallery-link-icon"></i>
+                        Pest Control
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="tm-gallery-link" data-filter="upholstery">
+                        <i class="fas fa-couch tm-gallery-link-icon"></i>
+                        Upholstery
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="tm-gallery-link" data-filter="commercial">
+                        <i class="fas fa-broom tm-gallery-link-icon"></i>
+                        Commercial Cleaning
+                    </a>
+                </li>
+            </ul>
+            <div class="tm-gallery">
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc1.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc1.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/commercialcleaning/tn/commercial5.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>CLEANING</i></h2>
+                        <a href="img/gallery/commercialcleaning/commercial5.jpg">View more</a>						
+                    </figcaption>			
+                </figure>  
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest1.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest1.JPG">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph1.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph1.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/commercialcleaning/tn/commercial4.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>CLEANING</i></h2>
+                        <a href="img/gallery/commercialcleaning/commercial4.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest2.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest2.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc2.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc2.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph2.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph2.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/commercialcleaning/tn/commercial3.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>CLEANING</i></h2>
+                        <a href="img/gallery/commercialcleaning/commercial3.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc3.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc3">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph3.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph3.jpg">View more</a>						
+                    </figcaption>			
+                </figure>  
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest3.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest3.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph4.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph4.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/commercialcleaning/tn/commercial2.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>CLEANING</i></h2>
+                        <a href="img/gallery/commercialcleaning/commercial2.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest4.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest4.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc4.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc4.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph5.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph5.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/commercialcleaning/tn/commercial1.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>CLEANING</i></h2>
+                        <a href="img/gallery/commercialcleaning/commercial1.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc5.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc5.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest5.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest5.jpg">View more</a>						
+                    </figcaption>			
+                </figure>  
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest6.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest6.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item upholstery">
+                    <img src="img/gallery/upholstery/tn/uph6.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>UPHOLSTERY</i></h2>
+                        <a href="img/gallery/upholstery/uph6.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <!--<figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/tn/building-06.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>Dreamy Honey</i></h2>
+                        <a href="img/gallery/building-06.jpg">View more</a>						
+                    </figcaption>			
+                </figure>-->
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/pc6.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc6.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest7.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest7.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc7.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc7">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest10.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest10.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <!--<figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/tn/building-07.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>Dreamy Honey</i></h2>
+                        <a href="img/gallery/building-07.jpg">View more</a>						
+                    </figcaption>			
+                </figure>-->
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc8.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc8.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <!--<figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/tn/building-08.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>Dreamy Honey</i></h2>
+                        <a href="img/gallery/building-08.jpg">View more</a>						
+                    </figcaption>			
+                </figure> --> 
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest8.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>Dreamy Honey</i></h2>
+                        <a href="img/gallery/pest/pest8.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc10.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc10.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <!--<figure class="effect-honey tm-gallery-item commercial">
+                    <img src="img/gallery/tn/building-09.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>Dreamy Honey</i></h2>
+                        <a href="img/gallery/building-09.jpg">View more</a>						
+                    </figcaption>			
+                </figure>-->
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest9.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest9.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
+                <figure class="effect-honey tm-gallery-item postconstruction">
+                    <img src="img/gallery/postconstruction/tn/pc9.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>POST CONSTRUCTION</i></h2>
+                        <a href="img/gallery/postconstruction/pc9.jpg">View more</a>						
+                    </figcaption>			
+                </figure>
+                <figure class="effect-honey tm-gallery-item pestcontrol">
+                    <img src="img/gallery/pest/tn/pest11.jpg" alt="Image"/>
+                    <figcaption>
+                        <h2><i>PEST CONTROL</i></h2>
+                        <a href="img/gallery/pest/pest11.jpg">View more</a>						
+                    </figcaption>			
+                </figure> 
             </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery1.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery1.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clean N Classy</h3>
-            </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery2.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery2.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clean N Classy</h3>
-            </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery3.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery3.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clesn N Classy</h3>
-            </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery4.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery4.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clean N Classy</h3>
-            </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-lg-4 col-md-6 wow fadeInUp">
-        <div class="galleryImg"><img src="images/pestcontrol/gallery5.jpg" alt="">
-          <div class="portfolio-overley">
-            <div class="content">
-              <a href="images/pestcontrol/gallery5.jpg" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a>
-              <div class="gallery_info">
-              <h3>Clean N Classy</h3>
-            </div>
-            </div>
-          </div>
-        </div>
-      </li>
-</ul>
+        </section>
+    </div>
 </div>
 </section>
 
@@ -293,8 +513,10 @@
 
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
-<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/popper.min.js"></script> 
+<script src="https://use.fontawesome.com/11b9ded44c.js"></script>
 <script src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
@@ -305,12 +527,20 @@
 <!-- wow js --> 
 <script src="js/animate.js"></script> 
 <script src="js/jquery.nice-select.js"></script> 
-<script src="js/jquery.flexslider.js"></script> 
+<script src="js/jquery.flexslider.js"></script>          <!-- https://jquery.com/ -->
+<script src="js/jquery.singlePageNav.min.js"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
+<script src="js/parallax/parallax.min.js"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
+<script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ -->
+<script src="js/isotope.pkgd.min.js"></script> 
+<script src="js/jquery.magnific-popup.min.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+<script src="slick/slick.min.js"></script>              <!-- https://kenwheeler.github.io/slick/ -->
+    
 <script>
   new WOW().init();
 </script> 
 <!-- general script file --> 
 <script src="js/wow.js"></script> 
 <script src="js/script.js"></script>
+<script src="js/templatemo-script.js"></script>
 </body>
 </html>

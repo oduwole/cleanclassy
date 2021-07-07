@@ -1,4 +1,4 @@
-    @charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
 
@@ -2538,7 +2538,7 @@ body {
     margin-top: 0px
 }
 
-h2 {
+/*h2 {
     color: #333;
     text-align: center;
     text-transform: uppercase;
@@ -2558,7 +2558,7 @@ h2::after {
     left: 0;
     right: 0;
     bottom: -10px
-}
+}*/
 
 .carousel {
     width: 650px;

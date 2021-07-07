@@ -261,7 +261,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/image-1.jpeg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;" width="600"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/image-1.jpeg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;" width="600"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -322,7 +322,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/step1.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/step1.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -379,7 +379,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/step2.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/step2.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -446,7 +446,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/image-13.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/image-13.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -503,7 +503,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/image-12.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/image-12.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 35%;max-width: 63px;" width="63"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -590,7 +590,7 @@ module.exports = {
 '  <tr>'+
 '    <td style="padding-right: 0px;padding-left: 0px;" align="center">'+
 '      '+
-'      <img align="center" border="0" src="images/image-2.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;" width="600"/>'+
+'      <img align="center" border="0" src="http://temp.cleanclassy.com/email-templates/template/images/image-2.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;" width="600"/>'+
 '      '+
 '    </td>'+
 '  </tr>'+
@@ -732,7 +732,7 @@ module.exports = {
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://facebook.com/cleanclassyng" title="Facebook" target="_blank">'+
-'          <img src="images/image-8.png" alt="Facebook" title="Facebook" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'          <img src="http://temp.cleanclassy.com/email-templates/template/images/image-8.png" alt="Facebook" title="Facebook" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table>'+
@@ -742,7 +742,7 @@ module.exports = {
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://twitter.com/cleanclassyng" title="Twitter" target="_blank">'+
-'          <img src="images/image-6.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'          <img src="http://temp.cleanclassy.com/email-templates/template/images/image-6.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table>'+
@@ -752,7 +752,7 @@ module.exports = {
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://api.whatsapp.com/send/?phone=08051730803" title="WhatsApp" target="_blank">'+
-'          <img src="images/image-4.png" alt="WhatsApp" title="WhatsApp" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'          <img src="http://temp.cleanclassy.com/email-templates/template/images/image-4.png" alt="WhatsApp" title="WhatsApp" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table>'+
@@ -762,7 +762,7 @@ module.exports = {
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://instagram.com/cleanclassyng" title="Pinterest" target="_blank">'+
-'          <img src="images/instagram.png" alt="instagram" title="instagram" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'          <img src="http://temp.cleanclassy.com/email-templates/template/images/instagram.png" alt="instagram" title="instagram" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table>'+
@@ -773,7 +773,7 @@ module.exports = {
 '    <!--<table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 0px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
 '        <a href="https://youtube.com/" title="YouTube" target="_blank">'+
-'          <img src="images/image-3.png" alt="YouTube" title="YouTube" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
+'          <img src="http://temp.cleanclassy.com/email-templates/template/images/image-3.png" alt="YouTube" title="YouTube" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
 '    </tbody></table> -->'+

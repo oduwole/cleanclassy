@@ -39,14 +39,14 @@ const { getMailMessage } = require('./mailt.js');
     password: "Se0103?2015gun"
 });*/
 
-  con.connect(function(err) {
+  /*con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
     con.query("CREATE DATABASE IF NOT EXISTS cleanclassydb", function (err, result) {
         if (err) throw err;
         console.log("CLean N ClassyDatabase created");
       });
-  });
+  });*/
 
   cond.connect(function(err) {
     if (err) throw err;
