@@ -220,7 +220,7 @@
                         </div>
                         <div class="col-sm-6">
                           <label>Email Address</label>
-                          <input type="email" class="form-control" id="emailAddress" name="Email Address" />
+                          <input type="email" class="form-control" id="emailAddress" name="Email Address" placeholder="Customer Email Address" />
                         </div>
                         <div class="col-sm-6">
                           <label>Customer Phone Number</label>
@@ -286,7 +286,7 @@
                           </div>
                           <div class="col-sm-6">
                             <label>Company Email Address</label>
-                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" />
+                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Company Email Address" />
                           </div>
                           <div class="col-sm-6">
                             <label>Company Phone Number</label>
@@ -344,7 +344,36 @@
                   </div>
     
             <div class="tab-pane container"  id="tabs-3">
-                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.</p><p> Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales.</p>
+              <form id="specialservice">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Name</label>
+                    <input class="form-control" id="companyName" name="companyName" placeholder="Name" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Email Address" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Phone Number</label>
+                    <input class="form-control" id="companyPhoneNo" name="Phone Number" placeholder="Phone Number" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Address/Closest Landmark</label>
+                    <input class="form-control" id="companyAddress" name="Customer Address" placeholder="Address" />
+                  </div>  
+                  
+                  <div class="col-sm-12">
+                    <label>Details</label>
+                    <div class="wrapper">
+                      <textarea class="form-control" name="Other Information"></textarea>
+                    </div>
+                  </div> 
+                  <div class="col-sm-12">
+                    <button type="button" class="submit btn btn-danger" id="specialRequestBtn"  onClick="save(this.id)"><i class="fa fa-save"></i> SUBMIT</button>
+                  </div>
+                </div>
+              </form>
             </div>
               </div><!--End tabs container-->	
         </div>
@@ -402,7 +431,7 @@
             <div class="social-icons footer_icon">
               <ul>
                 <li><a href="https://web.facebook.com/cleanclassyng/?_rdc=1&_rdr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/cleanclassyng"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a href="https://www.instagram.com/cleanclassyng/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=2348051730803"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                 <li><a href="https://www.linkedin.com/company/cleanclassyng"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -465,6 +494,8 @@
         saveFrm = JSON.stringify($("#commercial").serializeObject());
       }else if(clicked_id === 'residentialBtn'){
         saveFrm = JSON.stringify($("#residence").serializeObject());
+      }else if(clicked_id === 'specialRequestBtn'){
+        saveFrm = JSON.stringify($("#specialservice").serializeObject());
       }
       try {
         if (JobCategoryForm === null) {
