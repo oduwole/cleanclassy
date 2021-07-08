@@ -751,7 +751,7 @@ module.exports = {
 '    <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 20px;" valign="top"><![endif]-->'+
 '    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 20px">'+
 '      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">'+
-'        <a href="https://api.whatsapp.com/send/?phone=23480517330803" title="WhatsApp" target="_blank">'+
+'        <a href="https://api.whatsapp.com/send/?phone=2348051730803" title="WhatsApp" target="_blank">'+
 '          <img src="http://temp.cleanclassy.com/email-templates/template/images/image-4.png" alt="WhatsApp" title="WhatsApp" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">'+
 '        </a>'+
 '      </td></tr>'+
