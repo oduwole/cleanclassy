@@ -56,7 +56,7 @@
     var mailOptions = {
             from: 'info@cleanclassy.com',
             //to: 'segun@impartlab.com',
-            to: 'cleanclassy@gmail.com',
+            to: 'cleanclassyng@gmail.com',
             bcc: 'segxy2708@hotmail.com',
             //to: 'segun@impartlab.com',
             subject: 'Clean \'N\' Classy Appointment',
