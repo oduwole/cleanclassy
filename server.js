@@ -12,10 +12,10 @@ const { getMailMessage } = require('./mailt.js');
 //request = require('request'),
 //cors = require('cors');
 
-/*const ssl_options = {
+const ssl_options = {
     key: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/privkey.pem"),
     cert: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/fullchain.pem")
-  };*/
+  };
 
   
 
@@ -394,8 +394,8 @@ app.use(function(req, res, next) {
 //    res.sendFile('index.html', { root: __dirname + '/' });
 //});
 
-app.listen(app.get('port'), function() {
+/*app.listen(app.get('port'), function() {
     // conole.log('app running on port', app.get('port'));
-});
+});*/
 
-//https.createServer(ssl_options, app).listen(app.get('port'));
+https.createServer(ssl_options, app).listen(app.get('port'));
