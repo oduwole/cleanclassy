@@ -2362,8 +2362,10 @@ section.our_team_wrap .team_member{margin-bottom: 20px; margin-left: auto; margi
         margin: 0 auto;
         padding-bottom: 50px
     }
+    .slidertext1, .slidertext2, .slidertext3, .slidertext4, .slidertext5, .slidertext_hover{margin-left: 30px !important;}
 }
 @media screen and (max-width: 480px){
+    .slidertext1, .slidertext2, .slidertext3, .slidertext4, .slidertext5, .slidertext_hover{margin-left: 30px !important;}
     .carousel {
         width: 360px !important;
         margin: 0 auto;
