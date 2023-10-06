@@ -20,14 +20,14 @@ const ssl_options = {
   
 
   var con = mysql.createConnection({
-    host: "54.195.164.201",
+    host: "158.101.223.8",//"54.195.164.201",
     user: "oduwole",
     password: "Se0103?2015gun"
   });
 
   
   var cond = mysql.createConnection({
-    host: "54.195.164.201",
+    host: "158.101.223.8",//"54.195.164.201",
     user: "oduwole",
     password: "Se0103?2015gun",
     database: "cleanclassydb"
