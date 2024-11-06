@@ -12,12 +12,21 @@ const { getMailMessage } = require('./mailt.js');
 //request = require('request'),
 //cors = require('cors');
 
+
+const environment = process.env.NODE_ENV || 'development';
+console.log(environment);
 const ssl_options = {
-    key: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/fullchain.pem")
+    
   };
 
-  
+  if(environment == 'development'){
+    
+}else {
+    ssl_options = {
+        key: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/cleanclassy.com/fullchain.pem")
+    }
+}
 
   var con = mysql.createConnection({
     host: "54.195.164.201",
@@ -397,5 +406,10 @@ app.use(function(req, res, next) {
 /*app.listen(app.get('port'), function() {
     // conole.log('app running on port', app.get('port'));
 });*/
-
-https.createServer(ssl_options, app).listen(app.get('port'));
+if(environment == 'development'){
+    app.listen(app.get('port'), function() {
+        // conole.log('app running on port', app.get('port'));
+    }); 
+}else {
+    https.createServer(ssl_options, app).listen(app.get('port'));
+}
